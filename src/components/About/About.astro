@@ -1,0 +1,28 @@
+---
+import SocialIcons from '../SocialIcons.astro';
+import Title from '../atoms/Title.astro';
+import "./about.css"
+
+
+---
+
+<section id="about" class="about">
+	<div class="about__container">
+		<img
+			class="about__img"
+			src="https://www.bpocenter.com.bo/wp-content/uploads/2017/11/10.jpg"
+			alt="Profile picture of Oliver M."
+		/>
+
+		<div class="about__content">
+			<Title margin="1rem" contenido="About me" />
+			<p class="about__text">
+				I'm a digital marketer turned web developer with 4+ years of experience.
+				I love technology and online businesses, my favorite tools are Google Analytics, Google Ads, Meta Ads,
+				VSCode, and of course coding. In contrast, I also love nature so, I do MTB and soccer with my friends on weekends.
+			</p>
+			<SocialIcons width="25" height="25"/>
+		</div>
+	</div>
+
+</section>

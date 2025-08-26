@@ -1,0 +1,43 @@
+---
+import TerminalIcon from '../../atoms/terminal-icon/TerminalIcon.astro';
+import Terminal from '../terminal/Terminal.astro';
+import './skills-on-terminal.css';
+---
+
+<Terminal nombre="oliverModesto">
+	<div class="terminal__skills">
+		<h2>My skills</h2>
+		<div class="terminal__skills__container">
+			<TerminalIcon
+				src="/assets/html.svg"
+				color="#F06529"
+				name="HTML"
+			/>
+			<TerminalIcon
+				src="/assets/css.svg"
+				color="#00A3FF"
+				name="CSS"
+			/>
+			<TerminalIcon
+				src="/assets/javascript.svg"
+				color="#f0db4f"
+				name="JavaScript"
+			/>
+			<TerminalIcon 
+				src="/assets/mysql.svg" 
+				color="#00758F " 
+				name="MySQL" 
+			/>
+			<TerminalIcon 
+				src="/assets/Astro.svg" 
+				color="#FF5D8F" 
+				name="Astro" 
+			/>
+			<TerminalIcon
+				src="/assets/wordpress.svg"
+				color="#00749c"
+				name="WordPress"
+			/>
+		</div>
+	</div>
+</Terminal>
