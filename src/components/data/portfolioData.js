@@ -67,11 +67,11 @@ export const portafolioData = [
 		anim: 'fade-left',
 	},
 	{
-		imgSrc: 'https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2021/06/copy-of-the-6-best-restaurant-website-templates-1.png',
-		title: 'Arcade Game',
+		imgSrc: '../public/img/code4.png',
+		title: 'Project in process',
 		skills: ['React', 'StyledComponents'],
 		descripcion:
-			'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
+			'This project is still in process.',
 		demoURL: '',
 		repoURL: '',
 		anim: 'fade-right',
