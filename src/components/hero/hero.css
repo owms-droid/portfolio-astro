@@ -73,7 +73,7 @@
 	.hero .hero__container {
 		display: flex;
 		max-width: 100%;
-		gap: 0;
+		gap: 4rem;
 		flex-direction: column-reverse;
 		justify-content: center;
 		align-items: center;
