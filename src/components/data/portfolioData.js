@@ -17,7 +17,7 @@
  */
 export const portafolioData = [
 	{
-		imgSrc: '/public/img/biztum-landing-img.png',
+		imgSrc: '/img/biztum-landing-img.png',
 		title: 'Landing Page',
 		skills: ['React', 'StyledComponents'],
 		descripcion:
@@ -27,7 +27,7 @@ export const portafolioData = [
 		anim: 'fade-right',
 	},
 	{
-		imgSrc: '/public/img/ctiroads-official.png',
+		imgSrc: '/img/ctiroads-official.png',
 		title: 'Landing Page',
 		skills: ['JavaScript', 'Bootstrap'],
 		descripcion:
@@ -37,7 +37,7 @@ export const portafolioData = [
 		anim: 'fade-up',
 	},
 	{
-		imgSrc: '/public/img/scoreboard-app.png',
+		imgSrc: '/img/scoreboard-app.png',
 		title: 'Web App',
 		skills: ['JavaScript', 'CSS'],
 		descripcion:
@@ -47,7 +47,7 @@ export const portafolioData = [
 		anim: 'fade-left',
 	},
 	{
-		imgSrc: '/public/img/portfolio-view.png',
+		imgSrc: '/img/portfolio-view.png',
 		title: 'Portfolio Project',
 		skills: ['JavaScript', 'CSS', 'StyledComponents'],
 		descripcion:
@@ -57,7 +57,7 @@ export const portafolioData = [
 		anim: 'fade-left',
 	},
 	{
-		imgSrc: '/public/img/chamber-huanuco.png',
+		imgSrc: '/img/chamber-huanuco.png',
 		title: 'University Project',
 		skills: ['JavaScript', 'CSS', 'StyledComponents'],
 		descripcion:
@@ -67,7 +67,7 @@ export const portafolioData = [
 		anim: 'fade-left',
 	},
 	{
-		imgSrc: '/public/img/code4.png',
+		imgSrc: '/img/code4.png',
 		title: 'Project in process',
 		skills: ['React', 'StyledComponents'],
 		descripcion:
