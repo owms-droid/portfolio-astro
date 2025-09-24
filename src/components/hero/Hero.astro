@@ -4,22 +4,87 @@ import Boton from '../atoms/Boton.astro';
 ---
 
 <section class="hero">
-
 	<div class="hero__container">
 		<div class="text__content">
-			<p class="hero__text">Hello!</p>
+			<p class="hero__text">Hi there!</p>
 			<h1 class="hero__title color__gradiente">I'm Oliver Modesto</h1>
-			<p class="hero__text">
-				A Web Developer and Markerting Specialist.
-			</p>
-			<Boton href="https://calendar.app.google/1FdB15EuStJZwGUT9" texto="Meet with me"/>
+			<div class="typing-container">
+				<span class="hero__text" id="animate-typing"></span>
+			</div>
+			<Boton
+				href="https://calendar.app.google/1FdB15EuStJZwGUT9"
+				texto="Meet with me"
+			/>
 		</div>
-		<img
-			class="hero__img"
-			src="/img/oliver_profile_pic.jpeg"
-			alt="Oliver Modesto"
-			width="384"
-			height="384"
-		/>
+		<div class="hero__carousel">
+			<img
+				class="carousel-img"
+				src="/img/code2.png"
+				alt="snippet of code"
+			/>
+			<img
+				class="carousel-img"
+				src="/img/code3.png"
+				alt="snippet of code"
+			/>
+			<img
+				class="carousel-img"
+				src="/img/code4.png"
+				alt="snippet of code"
+			/>
+			<!-- Add more images as needed -->
+		</div>
 	</div>
 </section>
+
+<script>
+	import {
+		typeErase,
+		updateCarousel,
+	} from '../../utils/animations/hero-animation.js';
+
+	document.addEventListener('DOMContentLoaded', () => {
+		// Initialize typing animation
+		typeErase();
+
+		// Initialize carousel
+		const firstImage = document.querySelector('.carousel-img');
+		if (firstImage) {
+			firstImage.classList.add('active');
+		}
+		updateCarousel();
+
+		// Set up carousel rotation
+		setInterval(() => {
+			const carouselImgs = document.querySelectorAll('.carousel-img');
+			let activeIndex = Array.from(carouselImgs).findIndex((img) =>
+				img.classList.contains('active')
+			);
+			carouselImgs[activeIndex].classList.remove('active');
+			activeIndex = (activeIndex + 1) % carouselImgs.length;
+			carouselImgs[activeIndex].classList.add('active');
+			updateCarousel();
+		}, 5000);
+	});
+</script>
+
+<script>
+	import {
+		typeErase,
+		updateCarousel,
+	} from '../../utils/animations/hero-animation.js';
+
+	// Start both animations when the component mounts
+	document.addEventListener('DOMContentLoaded', () => {
+		typeErase();
+		updateCarousel(); // Initialize carousel
+		setInterval(() => {
+			const carouselImgs = document.querySelectorAll('.carousel-img');
+			let activeIndex = Array.from(carouselImgs).findIndex((img) =>
+				img.classList.contains('active')
+			);
+			activeIndex = (activeIndex + 1) % carouselImgs.length;
+			updateCarousel();
+		}, 5000); // Change image every 5 seconds
+	});
+</script>

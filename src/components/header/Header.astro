@@ -11,7 +11,7 @@ import Logo from '../Logo.astro';
 			<button class="menu__btn">Menu</button>
 			<ul class="header__list">
 				{
-					origin.map((data) => (
+					origin.map((data:any) => (
 						<li>
 							<a class="menu__link" href={data.link}>
 								<span class="icon__container" >

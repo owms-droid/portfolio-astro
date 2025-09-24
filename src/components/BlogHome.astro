@@ -5,7 +5,7 @@ import Boton from "./atoms/Boton.astro";
 import FormattedDate from "./FormattedDate.astro";
 import CardBlog from "./CardBlog.astro";
 const posts = (await getCollection('blog')).sort(
-(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 ---
