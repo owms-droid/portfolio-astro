@@ -15,7 +15,11 @@ import Footer from '../components/Footer/Footer.astro';
 		<meta charset="UTF-8" />
 		<meta name="description" content="owiDev Blog" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="../../img/owidev-logo.png"/>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="../../img/owidev-logo.png"
+		/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
@@ -26,17 +30,30 @@ import Footer from '../components/Footer/Footer.astro';
 		></script>
 
 		<title>{title}</title>
+
+		<!--Google AdSense integration-->
+		<script
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3371929463714051"
+			crossorigin="anonymous">
+		</script>
 	</head>
 	<body>
 		<Header origin={menuBlog} name="Oliver M." />
-		<main class="w-full flex flex-col justify-center items-center pt-[13rem]">
+		<main
+			class="w-full flex flex-col justify-center items-center pt-[13rem]"
+		>
 			<div class="text-center">
-				<h1 class="text-4xl text-center font-extrabold color__gradiente mb-3">
+				<h1
+					class="text-4xl text-center font-extrabold color__gradiente mb-3"
+				>
 					{title}
 				</h1>
 				<FormattedDate date={pubDate} clase="text-white text-2xl  " />
 			</div>
-			<section class="flex flex-col md:max-w-[57%] max-w-[100%] min-w-[30rem] px-5 pt-10 pb-[3rem] justify-center w-[80%">
+			<section
+				class="flex flex-col md:max-w-[57%] max-w-[100%] min-w-[30rem] px-5 pt-10 pb-[3rem] justify-center w-[80%"
+			>
 				<slot />
 			</section>
 		</main>

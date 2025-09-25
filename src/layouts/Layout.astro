@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css"
+import '../styles/global.css';
 interface Props {
 	title: string;
 }
@@ -19,12 +19,23 @@ import { mainMenu } from '../components/data/menuData.js';
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
-		<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+		></script>
 		<title>{title}</title>
+		
+		<!--Google AdSense integration-->
+		<script
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3371929463714051"
+			crossorigin="anonymous">
+		</script>
 	</head>
 	<body class="flex flex-col">
-
-			<slot/>
+		<slot />
 	</body>
 </html>
