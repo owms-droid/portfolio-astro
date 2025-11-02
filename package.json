@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "owidev",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -24,7 +24,7 @@
   "main": "index.astro",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SofiDevO/portfolio-astrosofidev-garrux.git"
+    "url": "git+https://github.com/owms-droid/portfolio-astro"
   },
   "keywords": [
     "astro",
@@ -36,10 +36,10 @@
     "css",
     "tailwind"
   ],
-  "author": "SofiDev / Garrux",
-  "license": "MIT",
+  "author": "Oliver / OwiDev",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/SofiDevO/portfolio-astrosofidev-garrux/issues"
+    "url": "https://github.com/owms-droid/portfolio-astro"
   },
-  "homepage": "https://github.com/SofiDevO/portfolio-astrosofidev-garrux#readme"
+  "homepage": "https://github.com/owms-droid/portfolio-astro"
 }
