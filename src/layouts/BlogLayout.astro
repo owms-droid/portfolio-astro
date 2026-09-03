@@ -3,8 +3,8 @@ import type { CollectionEntry } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/header/Header.astro';
 import { menuBlog } from '../components/data/menuData';
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 type Props = CollectionEntry<'blog'>['data'];
+const { title, pubDate }: Props = Astro.props;
 import '../styles/global.css';
 import Footer from '../components/Footer/Footer.astro';
 ---
@@ -26,6 +26,7 @@ import Footer from '../components/Footer/Footer.astro';
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<script
+			is:inline
 			src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
 		></script>
 
@@ -33,6 +34,7 @@ import Footer from '../components/Footer/Footer.astro';
 
 		<!--Google AdSense integration-->
 		<script
+			is:inline
 			async
 			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3371929463714051"
 			crossorigin="anonymous">
@@ -41,7 +43,7 @@ import Footer from '../components/Footer/Footer.astro';
 	<body>
 		<Header origin={menuBlog} name="Oliver M." />
 		<main
-			class="w-full flex flex-col justify-center items-center pt-[13rem]"
+				class="w-full flex flex-col justify-center items-center pt-[13rem]"
 		>
 			<div class="text-center">
 				<h1
@@ -52,7 +54,7 @@ import Footer from '../components/Footer/Footer.astro';
 				<FormattedDate date={pubDate} clase="text-white text-2xl  " />
 			</div>
 			<section
-				class="flex flex-col md:max-w-[57%] max-w-[100%] min-w-[30rem] px-5 pt-10 pb-[3rem] justify-center w-[80%"
+				class="flex flex-col md:max-w-[57%] max-w-[100%] min-w-[30rem] px-5 pt-10 pb-[3rem] justify-center w-[80%]"
 			>
 				<slot />
 			</section>
