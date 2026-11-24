@@ -1,5 +1,4 @@
 ---
-import terminalIcon from './terminal-icon.module.css';
 interface Props {
 	name: string;
 	src: string;
@@ -8,7 +7,34 @@ interface Props {
 const { name, src, color } = Astro.props;
 ---
 
-<div class={terminalIcon.base} style=`--icon-color: ${color};`>
-	<div class={terminalIcon.icon} style=`--svg: url(${src})`></div>
-	<span class={terminalIcon.name}>{name}</span>
+<div class="base" style=`--icon-color: ${color};`>
+	<div class="icon" style=`--svg: url(${src})`></div>
+	<span class="name">{name}</span>
 </div>
+
+<style>
+	.base {
+		width: min-content;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color: var(--icon-color);
+	}
+	.icon {
+		font-size: 7rem;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background-color: currentColor;
+		-webkit-mask-image: var(--svg);
+		mask-image: var(--svg);
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-size: 100% 100%;
+		mask-size: 100% 100%;
+	}
+	.name {
+		font-size: var(--text-general);
+	}
+</style>

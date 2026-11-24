@@ -37,10 +37,53 @@ import Footer from '../components/Footer/Footer.astro';
 				</h1>
 				<FormattedDate date={pubDate} clase="text-white text-2xl  " />
 			</div>
-			<section class="flex flex-col md:max-w-[57%] max-w-[100%] min-w-[30rem] px-5 pt-10 pb-[3rem] justify-center w-[80%]">
+			<section class="blog-content flex flex-col md:max-w-[57%] max-w-[100%] min-w-[30rem] px-5 pt-10 pb-[3rem] justify-center w-[80%]">
 				<slot />
 			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+<style>
+	.blog-content :global(p) {
+		font-size: 1.8rem;
+	}
+	.blog-content :global(p:has(> img)) {
+		display: flex;
+		justify-content: center;
+	}
+	.blog-content :global(p > img) {
+		width: 100%;
+		max-width: 80rem;
+		min-width: 27rem;
+	}
+	.blog-content :global(h2),
+	.blog-content :global(h3),
+	.blog-content :global(h4),
+	.blog-content :global(h5),
+	.blog-content :global(h6) {
+		color: white;
+		font-weight: 700;
+		margin: 2rem 0;
+	}
+	.blog-content :global(h2) {
+		font-size: var(--text-xx-large);
+	}
+	.blog-content :global(h3) {
+		font-size: var(--text-x-large);
+	}
+	.blog-content :global(h4) {
+		font-size: var(--text-large);
+	}
+	.blog-content :global(pre) {
+		font-size: 1.8rem;
+		padding: 1rem;
+		margin: 3rem 0;
+		border-radius: 0.5rem;
+	}
+	@media screen and (max-width: 768px) {
+		.blog-content :global(h2) {
+			font-size: 2rem;
+		}
+	}
+</style>

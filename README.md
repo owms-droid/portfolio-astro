@@ -7,17 +7,23 @@ Welcome to the Portfolio Template built with Astro! This responsive template all
 ## Table of Contents
 
 1. [Usage](#usage)
-2. [Portfolio Data Format](#portfolio-data-format)
-3. [Adding Icons with Iconify](#adding-icons-with-iconify)
-4. [Technologies Used](#technologies-used)
-5. [Figma Design](#figma-design)
-6. [Author and License](#author-and-license)
-7. [Bugs and Issues](#bugs-and-issues)
-8. [Homepage](#homepage)
+2. [Styling](#styling)
+3. [Portfolio Data Format](#portfolio-data-format)
+4. [Adding Icons with Iconify](#adding-icons-with-iconify)
+5. [Technologies Used](#technologies-used)
+6. [Figma Design](#figma-design)
+7. [Author and License](#author-and-license)
+8. [Bugs and Issues](#bugs-and-issues)
+9. [Homepage](#homepage)
 
 ## Usage
 
 To add new elements to your portfolio, you need to add them in `/src/data/portfolioData.js`.
+
+## Styling
+
+Use Tailwind utilities for layout and spacing. Keep design tokens, resets, and site-wide base rules in `src/styles/global.css`; put component-specific CSS in the corresponding `.astro` file's scoped `<style>` block. Use `:global(...)` only when styles must reach child-component or Markdown-rendered markup.
+
 
 ## Portfolio Data Format
 

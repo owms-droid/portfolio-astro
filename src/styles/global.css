@@ -78,7 +78,6 @@ html {
 body {
 	width: 100%;
 	background: var(--site-bg) no-repeat;
-	background: var(--site-bg) no-repeat;
 }
 main {
 	align-self: center;
