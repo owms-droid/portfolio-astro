@@ -32,7 +32,7 @@ export const portafolioData = [
 		skills: ['JavaScript', 'Bootstrap'],
 		descripcion:
 			'Landing page for a mobile app dedicated to outsource enterprise services, the purpose was to showcase the app to potential subscribers.',
-		demoURL: 'http://www.ctiroads.com/',
+		demoURL: 'https://www.ctiroads.com/',
 		repoURL: '',
 		anim: 'fade-up',
 	},

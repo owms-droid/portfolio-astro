@@ -44,7 +44,6 @@ export function typeErase() {
     }
   }
 }
-typeErase();
 
 // Carousel vertical sliding logic
 export function updateCarousel() {
@@ -68,11 +67,3 @@ export function updateCarousel() {
         }
     });
 }
-
-function nextCarouselImg() {
-    carouselIdx = (carouselIdx + 1) % carouselImgs.length;
-    updateCarousel();
-}
-
-updateCarousel();
-setInterval(nextCarouselImg, 2500);

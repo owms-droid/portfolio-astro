@@ -2,6 +2,7 @@
 import Logo from '../Logo.astro';
 import SocialIcons from '../SocialIcons.astro';
 import './Footer.css';
+import Icon from '../Icon.astro';
 ---
 
 <footer>
@@ -15,24 +16,28 @@ import './Footer.css';
 			<!-- <li>
 				<a class="footer__link" href="mailto:biztum.marketing@gmail.com"
 					><span
-						><iconify-icon
-							icon="fluent:mail-28-regular"
+						><Icon
+							name="fluent:mail-28-regular"
 							width="27"
 							height="27"
-							style="color: #dcd8fc"></iconify-icon></span
+							style="color: #dcd8fc"
+						/></span
 					>biztum.marketing@gmail.com</a>
 			</li> -->
 			<li>
-				<a class="footer__link"
-                href="https://github.com/owms-droid"
-                target="_blank"
-                rel="nofollow noreferrer noopener"
-					><span
-						><iconify-icon
-							icon="mdi:github"
+				<a
+					class="footer__link"
+					href="https://github.com/owms-droid"
+					target="_blank"
+					rel="nofollow noreferrer noopener"
+				>
+					<span
+						><Icon
+							name="mdi:github"
 							width="27"
 							height="27"
-							style="color: #dcd8fc"></iconify-icon></span
+							style="color: #dcd8fc"
+						/></span
 					>@owiDev</a>
 			</li>
 		</ul>

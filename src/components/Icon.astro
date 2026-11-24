@@ -1,0 +1,73 @@
+---
+import type { IconifyJSON } from '@iconify/types';
+import * as lucide from '@iconify-json/lucide';
+import * as octicon from '@iconify-json/octicon';
+import * as carbon from '@iconify-json/carbon';
+import * as mdi from '@iconify-json/mdi';
+import * as simpleIcons from '@iconify-json/simple-icons';
+import * as ri from '@iconify-json/ri';
+import * as fluent from '@iconify-json/fluent';
+import * as skillIcons from '@iconify-json/skill-icons';
+import * as quill from '@iconify-json/quill';
+import * as tabler from '@iconify-json/tabler';
+
+const iconSets: Record<string, IconifyJSON> = {
+	lucide: lucide.icons,
+	octicon: octicon.icons,
+	carbon: carbon.icons,
+	mdi: mdi.icons,
+	'simple-icons': simpleIcons.icons,
+	ri: ri.icons,
+	fluent: fluent.icons,
+	'skill-icons': skillIcons.icons,
+	quill: quill.icons,
+	tabler: tabler.icons,
+};
+
+interface Props {
+	name: string;
+	width?: string | number;
+	height?: string | number;
+	class?: string;
+	style?: string;
+	'aria-label'?: string;
+}
+
+const { name, width = '24', height = '24', class: className, style, 'aria-label': ariaLabel } = Astro.props;
+
+const [prefix, ...iconNameParts] = name.split(':');
+const iconName = iconNameParts.join(':');
+const iconSet = iconSets[prefix];
+
+if (!iconSet) {
+	throw new Error(`Icon set "${prefix}" not found for icon "${name}"`);
+}
+
+// Resolve icon data, falling back to alias parent if needed
+let iconData = iconSet.icons?.[iconName];
+if (!iconData && iconSet.aliases?.[iconName]) {
+	const alias = (iconSet.aliases as Record<string, { parent: string }>)[iconName];
+	iconData = iconSet.icons?.[alias.parent];
+}
+
+if (!iconData) {
+	throw new Error(`Icon "${name}" not found in set "${prefix}"`);
+}
+
+// Fall back to collection-level dimensions when the individual icon omits them
+const viewBoxWidth = iconData.width ?? iconSet.width ?? 24;
+const viewBoxHeight = iconData.height ?? iconSet.height ?? 24;
+const viewBox = `0 0 ${viewBoxWidth} ${viewBoxHeight}`;
+---
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={width}
+	height={height}
+	viewBox={viewBox}
+	class={className}
+	style={style}
+	aria-label={ariaLabel}
+	role="img"
+	set:html={iconData.body}
+/>

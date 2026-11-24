@@ -2,12 +2,13 @@
 import './header.css';
 const { origin } = Astro.props;
 import Logo from '../Logo.astro';
+import Icon from '../Icon.astro';
 ---
 
 <header class="header">
 	<div class="header__container">
 		<Logo name="owiDev"/>
-		<nav class="links"   tabindex="0.1">
+		<nav class="links" tabindex="0">
 			<button class="menu__btn">Menu</button>
 			<ul class="header__list">
 				{
@@ -15,12 +16,7 @@ import Logo from '../Logo.astro';
 						<li>
 							<a class="menu__link" href={data.link}>
 								<span class="icon__container" >
-									<iconify-icon
-										class="icons"
-										icon={data.icon}
-										width="20"
-										height="20"
-									/>
+									<Icon name={data.icon} width="20" height="20" class="icons" />
 									{data.content}
 								</span>
 							</a>

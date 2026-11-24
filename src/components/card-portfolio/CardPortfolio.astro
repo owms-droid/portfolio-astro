@@ -1,5 +1,7 @@
 ---
 import './card-portfolio.css';
+import Icon from '../Icon.astro';
+
 const {
 	title,
 	descripcion,
@@ -29,26 +31,30 @@ const {
 
 			<div class="skills">
 				{
-					skills.map((skill:any) => (
-						<iconify-icon class="iconify" icon={skill} />
+					skills.map((skill: string) => (
+						<Icon class="iconify" name={skill} />
 					))
 				}
 			</div>
 
 			<div class="buttons">
-				<a href={repoURL} target="_blank" rel="noopener noreferrer">
-					<span>
-						Github
-						{(<iconify-icon icon="quill:link-out" />)}
-					</span>
-				</a>
+				{repoURL && (
+					<a href={repoURL} target="_blank" rel="noopener noreferrer" aria-label={`View GitHub repository for ${title}`}>
+						<span>
+							Github
+							<Icon name="quill:link-out" />
+						</span>
+					</a>
+				)}
 
-				<a href={demoURL} target="_blank" rel="noopener noreferrer">
-					<span>
-						Demo
-						{(<iconify-icon icon="quill:link-out" />)}
-					</span>
-				</a>
+				{demoURL && (
+					<a href={demoURL} target="_blank" rel="noopener noreferrer" aria-label={`View live demo of ${title}`}>
+						<span>
+							Demo
+							<Icon name="quill:link-out" />
+						</span>
+					</a>
+				)}
 			</div>
 		</div>
 	</div>

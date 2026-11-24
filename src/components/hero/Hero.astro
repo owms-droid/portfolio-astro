@@ -68,23 +68,3 @@ import Boton from '../atoms/Boton.astro';
 	});
 </script>
 
-<script>
-	import {
-		typeErase,
-		updateCarousel,
-	} from '../../utils/animations/hero-animation.js';
-
-	// Start both animations when the component mounts
-	document.addEventListener('DOMContentLoaded', () => {
-		typeErase();
-		updateCarousel(); // Initialize carousel
-		setInterval(() => {
-			const carouselImgs = document.querySelectorAll('.carousel-img');
-			let activeIndex = Array.from(carouselImgs).findIndex((img) =>
-				img.classList.contains('active')
-			);
-			activeIndex = (activeIndex + 1) % carouselImgs.length;
-			updateCarousel();
-		}, 5000); // Change image every 5 seconds
-	});
-</script>
