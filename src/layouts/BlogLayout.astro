@@ -1,10 +1,11 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { siteConfig } from '../config/site.js';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/header/Header.astro';
 import { menuBlog } from '../components/data/menuData';
 type Props = CollectionEntry<'blog'>['data'];
-const { title, pubDate }: Props = Astro.props;
+const { title, pubDate, description }: Props = Astro.props;
 import '../styles/global.css';
 import Footer from '../components/Footer/Footer.astro';
 ---
@@ -13,7 +14,10 @@ import Footer from '../components/Footer/Footer.astro';
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="owiDev Blog" />
+		<meta
+			name="description"
+			content={description || siteConfig.description}
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link
 			rel="icon"

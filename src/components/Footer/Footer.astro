@@ -1,6 +1,7 @@
 ---
 import Logo from '../Logo.astro';
 import SocialIcons from '../SocialIcons.astro';
+import { siteConfig } from '../../config/site.js';
 import Icon from '../Icon.astro';
 ---
 
@@ -12,21 +13,10 @@ import Icon from '../Icon.astro';
 
 	<aside class="footer__links">
 		<ul>
-			<!-- <li>
-				<a class="footer__link" href="mailto:biztum.marketing@gmail.com"
-					><span
-						><Icon
-							name="fluent:mail-28-regular"
-							width="27"
-							height="27"
-							style="color: #dcd8fc"
-						/></span
-					>biztum.marketing@gmail.com</a>
-			</li> -->
 			<li>
 				<a
 					class="footer__link"
-					href="https://github.com/owms-droid"
+					href={siteConfig.githubUrl}
 					target="_blank"
 					rel="nofollow noreferrer noopener"
 				>

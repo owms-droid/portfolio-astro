@@ -8,22 +8,26 @@ Welcome to the Portfolio Template built with Astro! This responsive template all
 
 1. [Usage](#usage)
 2. [Styling](#styling)
-3. [Portfolio Data Format](#portfolio-data-format)
-4. [Adding Icons with Iconify](#adding-icons-with-iconify)
-5. [Technologies Used](#technologies-used)
-6. [Figma Design](#figma-design)
-7. [Author and License](#author-and-license)
-8. [Bugs and Issues](#bugs-and-issues)
-9. [Homepage](#homepage)
+3. [Site Configuration](#site-configuration)
+4. [Portfolio Data Format](#portfolio-data-format)
+5. [Adding Icons with Iconify](#adding-icons-with-iconify)
+6. [Technologies Used](#technologies-used)
+7. [Figma Design](#figma-design)
+8. [Author and License](#author-and-license)
+9. [Bugs and Issues](#bugs-and-issues)
+10. [Homepage](#homepage)
 
 ## Usage
 
-To add new elements to your portfolio, you need to add them in `/src/data/portfolioData.js`.
+To add new elements to your portfolio, update `src/components/data/portfolioData.js`.
 
 ## Styling
 
 Use Tailwind utilities for layout and spacing. Keep design tokens, resets, and site-wide base rules in `src/styles/global.css`; put component-specific CSS in the corresponding `.astro` file's scoped `<style>` block. Use `:global(...)` only when styles must reach child-component or Markdown-rendered markup.
 
+## Site Configuration
+
+Shared site metadata and links live in `src/config/site.js`. Update the canonical site URL, default description, booking link, GitHub profile, or social profiles there. Per-project demo and repository URLs remain in `src/components/data/portfolioData.js`.
 
 ## Portfolio Data Format
 
@@ -92,37 +96,17 @@ This data is then passed to the portfolio component as props.
 
 ## Adding Icons with Iconify
 
-We use Iconify for icons. To add new icons, use the `icon` attribute.
+Icons are rendered as inline SVGs at build time; no external Iconify script is needed. Use the local `Icon` component:
 
-### Example
+```astro
+---
+import Icon from '../components/Icon.astro';
+---
 
-To use a React icon:
-
-```html
-<iconify-icon icon="logos:react" width="27" height="27"></iconify-icon>
+<Icon name="simple-icons:react" width="27" height="27" />
 ```
 
-In `data.js`, specify the icon identifier like this:
-
-```js
-{
-    title: "React",
-    link: "https://reactjs.org/",
-    icon: "logos:react"
-}
-```
-
-### Adding the Iconify Script
-
-Add the Iconify script to the `<head>` section of your project:
-
-```html
-<head>
-    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-</head>
-```
-
-Once this script is included, you can use any Iconify icon by specifying its identifier.
+The icon sets are bundled from local `@iconify-json/*` packages and registered in `src/components/Icon.astro`.
 
 ## Technologies Used
 
