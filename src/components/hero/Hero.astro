@@ -71,7 +71,7 @@ import Boton from '../atoms/Boton.astro';
 		setInterval(() => {
 			const carouselImgs = document.querySelectorAll('.carousel-img');
 			let activeIndex = Array.from(carouselImgs).findIndex((img) =>
-				img.classList.contains('active')
+				img.classList.contains('active'),
 			);
 			carouselImgs[activeIndex].classList.remove('active');
 			activeIndex = (activeIndex + 1) % carouselImgs.length;
@@ -80,4 +80,3 @@ import Boton from '../atoms/Boton.astro';
 		}, 5000);
 	});
 </script>
-

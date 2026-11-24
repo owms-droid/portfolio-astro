@@ -8,7 +8,7 @@ import { menuBlog } from '../../components/data/menuData';
 import Footer from '../../components/Footer/Footer.astro';
 import AdSense from '../../components/AdSense.astro';
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
@@ -18,24 +18,22 @@ const posts = (await getCollection('blog')).sort(
 	<main class="self-center w-full">
 		<section class="blog__section min-h-[100dvh]">
 			<ul class="blog__elements">
-				{
-					posts.map((post) => (
-						<li>
-							<CardBlog
-								title={post.data.title}
-								content={post.data.description}
-								img={post.data.heroImage}
-								href={`/blog/${post.id}/`}
-							>
-								<FormattedDate
-									slot="date"
-									clase="text-[--secondary-90] font-bold font-xl"
-									date={post.data.pubDate}
-								/>
-							</CardBlog>
-						</li>
-					))
-				}
+				{posts.map((post) => (
+					<li>
+						<CardBlog
+							title={post.data.title}
+							content={post.data.description}
+							img={post.data.heroImage}
+							href={`/blog/${post.id}/`}
+						>
+							<FormattedDate
+								slot="date"
+								clase="text-[--secondary-90] font-bold font-xl"
+								date={post.data.pubDate}
+							/>
+						</CardBlog>
+					</li>
+				))}
 			</ul>
 		</section>
 	</main>

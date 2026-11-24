@@ -4,7 +4,6 @@
 
 Welcome to the Portfolio Template built with Astro! This responsive template allows you to showcase all your projects with an amazing UI. Below you'll find instructions on how to use this template, including how to add new portfolio items, main dependencies, and examples of usage.
 
-![Portada](image-1.png)
 ## Table of Contents
 
 1. [Usage](#usage)
@@ -33,7 +32,7 @@ The data for your portfolio should follow this format:
  * @property {string} description - Description of the card
  * @property {string} demoURL - URL of a demo page
  * @property {string} repoURL - URL of the repository, e.g., https://github.com/user/repo
- * @property {number} averageBrightness - Brightness level of the card's background color, e.g., 0.1
+ * @property {string} backgroundColor - Precomputed CSS color for the card background
  */
 
 /**
@@ -55,7 +54,7 @@ export const portfolioData = [
         description: 'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
         demoURL: '',
         repoURL: '',
-        averageBrightness: 0.1,
+        backgroundColor: 'rgb(24, 45, 90)',
     },
     // Add more portfolio items here
 ];

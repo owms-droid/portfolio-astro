@@ -9,7 +9,9 @@ const isExternal = /^(https?:|mailto:|tel:)/.test(href);
 	href={href}
 	target={isExternal ? '_blank' : undefined}
 	rel={isExternal ? 'noopener noreferrer' : undefined}
->{texto}</a>
+>
+	{texto}
+</a>
 
 <style>
 	.button {

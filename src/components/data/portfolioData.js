@@ -7,7 +7,7 @@
  * @property {string} descripcion La descripcion de la tarjeta
  * @property {string} demoURL Url de una pagina de demostración
  * @property {string} repoURL Url del repositorio, ej: https://github.com/usuario/repo
- * @property {number} averageBrightness Cuanto brillo tendrá el color de fondo de la tarjeta, ej: 0.1
+ * @property {string} backgroundColor Precomputed background color for the card
  */
 
 /**
@@ -23,6 +23,7 @@ export const portafolioData = [
 			'Developed a landing page for a marketing agency, showcasing main services they offer in the city of Huanuco, it has a WhatApp integration to interact with their potential clients.',
 		demoURL: 'https://biztum.netlify.app/',
 		repoURL: 'https://github.com/owms-droid/landing-hco',
+		backgroundColor: 'rgb(174, 174, 175)',
 	},
 	{
 		imgSrc: '/img/ctiroads-official.png',
@@ -32,6 +33,7 @@ export const portafolioData = [
 			'Landing page for a mobile app dedicated to outsource enterprise services, the purpose was to showcase the app to potential subscribers.',
 		demoURL: 'https://www.ctiroads.com/',
 		repoURL: '',
+		backgroundColor: 'rgb(119, 152, 164)',
 	},
 	{
 		imgSrc: '/img/scoreboard-app.png',
@@ -41,6 +43,7 @@ export const portafolioData = [
 			'Developed a useful scoreboard application to count the points made in soccer, volleyball, basketball etc. matches.',
 		demoURL: 'https://oliver-simple-scoreboard.netlify.app/',
 		repoURL: 'https://github.com/owms-droid/Scrimba-Scoreboard',
+		backgroundColor: 'rgb(12, 16, 27)',
 	},
 	{
 		imgSrc: '/img/portfolio-view.png',
@@ -50,6 +53,7 @@ export const portafolioData = [
 			'Designed the first version of my personal portfolio as part of my learning experience with JavaScript, applying some dynamic animations.',
 		demoURL: 'https://owms-droid.github.io/portfolio/',
 		repoURL: 'https://github.com/owms-droid/portfolio',
+		backgroundColor: 'rgb(25, 22, 55)',
 	},
 	{
 		imgSrc: '/img/chamber-huanuco.png',
@@ -59,16 +63,17 @@ export const portafolioData = [
 			'A full-stack demo website for the Chamber of Commerce from Huanuco. Built with JavaScript, HTML, and CSS. Includes a weather section, directory of businesses, and form to join the chamber.',
 		demoURL: 'https://owms-droid.github.io/wdd231/chamber/',
 		repoURL: 'https://github.com/owms-droid/wdd231/tree/main/chamber',
+		backgroundColor: 'rgb(119, 106, 133)',
 	},
 	{
 		imgSrc: '/img/code4.png',
 		title: 'Project in process',
 		skills: ['React', 'StyledComponents'],
-		descripcion:
-			'This project is still in process.',
+		descripcion: 'This project is still in process.',
 		demoURL: '',
 		repoURL: '',
-	}
+		backgroundColor: 'rgb(28, 27, 48)',
+	},
 ];
 
 const skillIcons = {

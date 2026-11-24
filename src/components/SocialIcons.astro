@@ -27,13 +27,16 @@ const socialLinks = [
 ---
 
 <div class="icons__container">
-	{
-		socialLinks.map((data) => (
-			<a href={data.href} target="_blank" rel="nofollow noreferrer noopener">
-				<Icon name={data.icon} width={width} height={height} class={`skill__icon ${data.title}`} />
-			</a>
-		))
-	}
+	{socialLinks.map((data) => (
+		<a href={data.href} target="_blank" rel="nofollow noreferrer noopener">
+			<Icon
+				name={data.icon}
+				width={width}
+				height={height}
+				class={`skill__icon ${data.title}`}
+			/>
+		</a>
+	))}
 </div>
 
 <style>

@@ -33,7 +33,14 @@ interface Props {
 	'aria-label'?: string;
 }
 
-const { name, width = '24', height = '24', class: className, style, 'aria-label': ariaLabel } = Astro.props;
+const {
+	name,
+	width = '24',
+	height = '24',
+	class: className,
+	style,
+	'aria-label': ariaLabel,
+} = Astro.props;
 
 const [prefix, ...iconNameParts] = name.split(':');
 const iconName = iconNameParts.join(':');
@@ -46,7 +53,9 @@ if (!iconSet) {
 // Resolve icon data, falling back to alias parent if needed
 let iconData = iconSet.icons?.[iconName];
 if (!iconData && iconSet.aliases?.[iconName]) {
-	const alias = (iconSet.aliases as Record<string, { parent: string }>)[iconName];
+	const alias = (iconSet.aliases as Record<string, { parent: string }>)[
+		iconName
+	];
 	iconData = iconSet.icons?.[alias.parent];
 }
 

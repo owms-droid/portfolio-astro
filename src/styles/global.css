@@ -28,7 +28,7 @@
 	--secondary-100: #ffffff;
 
 	/* colores de las propiedades */
-	--surface: #4F4360;
+	--surface: #4f4360;
 	--surface-variant: #e0d8e7;
 	--surface-dim: #998da9;
 	--surface-bridge: #d6cdee;
@@ -67,7 +67,7 @@
 		#df44e7 100%
 	);
 }
-*{
+* {
 	box-sizing: border-box;
 }
 html {
@@ -83,7 +83,7 @@ body {
 main {
 	align-self: center;
 }
-p{
+p {
 	color: var(--primary-100);
 	font-size: var(--text-general);
 }

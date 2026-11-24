@@ -1,10 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro";
-
-
+import About from '../components/About/About.astro';
+import Footer from '../components/Footer/Footer.astro';
+import Header from '../components/header/Header.astro';
+import { menuBlog } from '../components/data/menuData';
+import Skills from '../components/skills/Skills.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About Us">
-
-    <h2>Holi moli</h2>
+<Layout title="About Oliver Modesto | Web Developer">
+	<Header origin={menuBlog} name="Oliver M." />
+	<main class="self-center w-full pt-[8rem]">
+		<About />
+		<Skills />
+	</main>
+	<Footer />
 </Layout>

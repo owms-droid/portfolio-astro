@@ -7,22 +7,25 @@ import Icon from '../Icon.astro';
 
 <header class="header">
 	<div class="header__container">
-		<Logo name="owiDev"/>
+		<Logo name="owiDev" />
 		<nav class="links" tabindex="0">
 			<button class="menu__btn">Menu</button>
 			<ul class="header__list">
-				{
-					origin.map((data:any) => (
-						<li>
-							<a class="menu__link" href={data.link}>
-								<span class="icon__container" >
-									<Icon name={data.icon} width="20" height="20" class="icons" />
-									{data.content}
-								</span>
-							</a>
-						</li>
-					))
-				}
+				{origin.map((data: any) => (
+					<li>
+						<a class="menu__link" href={data.link}>
+							<span class="icon__container">
+								<Icon
+									name={data.icon}
+									width="20"
+									height="20"
+									class="icons"
+								/>
+								{data.content}
+							</span>
+						</a>
+					</li>
+				))}
 			</ul>
 		</nav>
 	</div>

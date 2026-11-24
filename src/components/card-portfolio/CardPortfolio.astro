@@ -9,37 +9,35 @@ const {
 	skills,
 	repoURL,
 	demoURL,
-	averageBrightness,
+	backgroundColor,
 } = Astro.props;
 ---
 
 <div class="card__portfolio">
-	<img
-		src={imgSrc}
-		alt={title}
-		crossorigin="anonymous"
-		height={130}
-		width={332}
-		loading="lazy"
-		average-brightness={averageBrightness}
-	/>
+	<img src={imgSrc} alt={title} height={130} width={332} loading="lazy" />
 
-	<div class="descripcion__container">
+	<div
+		class="descripcion__container"
+		style={`background-color: ${backgroundColor};`}
+	>
 		<h2 class="card__title">{title}</h2>
 		<div class="descripcion">
 			<p>{descripcion}</p>
 
 			<div class="skills">
-				{
-					skills.map((skill: string) => (
-						<Icon class="iconify" name={skill} />
-					))
-				}
+				{skills.map((skill: string) => (
+					<Icon class="iconify" name={skill} />
+				))}
 			</div>
 
 			<div class="buttons">
 				{repoURL && (
-					<a href={repoURL} target="_blank" rel="noopener noreferrer" aria-label={`View GitHub repository for ${title}`}>
+					<a
+						href={repoURL}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={`View GitHub repository for ${title}`}
+					>
 						<span>
 							Github
 							<Icon name="quill:link-out" />
@@ -48,7 +46,12 @@ const {
 				)}
 
 				{demoURL && (
-					<a href={demoURL} target="_blank" rel="noopener noreferrer" aria-label={`View live demo of ${title}`}>
+					<a
+						href={demoURL}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={`View live demo of ${title}`}
+					>
 						<span>
 							Demo
 							<Icon name="quill:link-out" />
