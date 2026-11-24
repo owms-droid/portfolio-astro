@@ -33,7 +33,6 @@ The data for your portfolio should follow this format:
  * @property {string} description - Description of the card
  * @property {string} demoURL - URL of a demo page
  * @property {string} repoURL - URL of the repository, e.g., https://github.com/user/repo
- * @property {string} anim - Animation that will play when the card loads, e.g., fade-up, fade-right, fade-left, fade-down
  * @property {number} averageBrightness - Brightness level of the card's background color, e.g., 0.1
  */
 
@@ -48,7 +47,6 @@ export const portfolioData = [
         description: 'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
         demoURL: '',
         repoURL: '',
-        anim: 'fade-right',
     },
     {
         imgSrc: 'https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/299377097/original/7eb7dcebe244fcf5ad75d92b0969fc116946bd57/create-professional-amd-responsive-wordpress-website.jpg',
@@ -57,7 +55,6 @@ export const portfolioData = [
         description: 'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
         demoURL: '',
         repoURL: '',
-        anim: 'fade-up',
         averageBrightness: 0.1,
     },
     // Add more portfolio items here
